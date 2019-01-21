@@ -19,7 +19,13 @@ get '/food' do
   </div>"
 end
 
-get '/cat' do
-  @random_name = ["Katie", "Chloe", "Jedd"].sample
+get '/random-cat' do
+  @name = ["Katie", "Chloe", "Jedd"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end

@@ -1,4 +1,11 @@
-<h1>My name is <%=@random_name%></h1>
+<h1>My name is <%=@name%></h1>
 <div style='border: 5px dashed blue'>
 <img src='http://bit.ly/1eze8aE'>
 </div>
+
+<div>
+<form action="/named-cat">
+  Name:<br>
+  <input type="text" name="name"><br>
+  <input type="submit" value="Submit">
+</form>
