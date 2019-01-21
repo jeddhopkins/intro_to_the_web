@@ -10,17 +10,16 @@ get '/secret' do
 end
 
 get '/sport' do
-  "football"
+  erb "The score is <%= 5 + 3 + 7%>"
 end
 
 get '/food' do
-  "<div>
-  <img src='https://i.dailymail.co.uk/i/pix/2018/02/02/18/48D3379500000578-5345305-image-a-16_1517595669475.jpg'
+  "<div style='border: 70px ridge blue'>
+  <img src='https://www.maxim.com/.image/t_share/MTU0ODMxNDYyMTkxODY3NDY2/steakpromo.jpg'>
   </div>"
 end
 
 get '/cat' do
-  "<div>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  @random_name = ["Katie", "Chloe", "Jedd"].sample
+  erb(:index)
 end
